@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="../Assets/images/title logo.png">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../syle.css">
+    <!-- cdn js -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css" />
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <span><ion-icon name="call-outline"></ion-icon><a href="">  251218543212</a>
+        </span>
+        <ul>
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+            <li><a href=""><ion-icon name="logo-whatsapp"></ion-icon>
+            </a></li>
+            <li><a href=""><ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+    </div>
+
+    <!-- nav -->
+    <div class="frame">
+    <nav>
+    <div class="logo">
+        <a href=""><img src="../Assets/images/logo (1).png" alt="logo"></a>
+    </div>
+    <div class="toggle">
+        <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+    </div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="">About US</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+
+    </ul>
+</nav>
+</div>
+<!-- nav end -->
+
+<!-- About Us -->
+
+<section class="sub-header">
+    <h1>About Us</h1>  
+</section>
+
+<!-- avout us contaent start  -->
+    <section class="about-us">
+
+        <div class="row">
+            <div class="about-col">
+                <h1>About Us</h1>
+                <p>Macrosol was formed by professional Engineers in Karachi with a vision of catering all the 
+                    requirements of industrial sector. We are serving to multiple sectors of Pakistan including 
+                    Energy, Oil & Gas, Sugar Mills, Pharmaceuticals, Textile & Cement Sector. Macrosol is a 
+                    specialized Engineering & Supply based organization, which is currently dealing in 
+                    Instrumentation, Automation, Electrical & Mechanical related equipment.</p>
+                    <a href="" class="ex-btn">EXplore Now</a>
+            </div>
+            <div class="about-col">
+                <img src="../Assets/images/intro.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+<!-- about us content end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section start -->
+<div class="line"></div>
+<footer>
+    <div class="container">
+        <div class="wrapper">
+            <div class="footer-widget">
+                <a href=""#>
+                    <img class="fimg" src="../Assets/images/logo (1).png" alt="">
+                </a>
+                <p class="desc">
+                    Here Commitment Matters!
+                </p>
+                <ul class="socials">
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Pages</h6>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./public/about.html">About Us</a></li>
+                    <li><a href="./public/products.html">Products</a></li>
+                    <li><a href="./public/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Services</h6>
+                <ul class="links">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                </ul>
+            </div><div class="footer-widget">
+                <h6>Supports</h6>
+                <ul class="links">
+                    <li><a href="#">live chat</a></li>
+                    <li><a href="#">whatsapp</a></li>
+                    <li><a href="#">call</a></li>
+                    <li><a href="">for info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-wrapper">
+            <p>copyright© macrosol</p>
+        </div>
+    </div> 
+</footer>
+
+<!-- footer section end -->
+
+<!--  -->
+<script>
+    var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+</script>
+
+<!--  -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".toggle").on("click", function(){
+        if($(".menu").hasClass("active")){
+            $(".menu").removeClass("active");
+            $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+
+        } else {
+            $(".menu").addClass("active");
+            $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+
+        }
+    })
+})
+</script>
+</body>
+</html>
